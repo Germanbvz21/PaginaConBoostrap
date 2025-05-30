@@ -1,0 +1,428 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: sans-serif;
+}
+:root {
+    --light-color:#fffe;
+    --light-color2:#d2d2d2ee;
+    --light-blue-color:#01336a;
+    --light-blue-color2:#22396b;
+    --light-blue-color3:#22396b88;
+    --light-blue-color4:#1b2d53bc;
+    --dark-color:#040404;
+    --gold-color:#f9be3d;
+    --color-bx:#101010d7;
+}
+body {
+    position: relative;
+    background-color: var(--light-blue-color2);
+}
+/* Header section */
+.header {
+    display: flex;
+    position: fixed;
+    flex-wrap: wrap;
+    top: 0;
+    align-items: center;
+    max-width: 2500px;
+    min-width: 250px;
+    width: 100%;
+    justify-content: space-between;
+    background-color: var(--light-blue-color2);
+    padding: 8px 40px;
+    box-shadow: 0px 8px 30px var(--color-bx);
+    transition: padding 0.9s ease;
+    z-index: 10;
+}
+.header.expanded {
+    padding: 12px 40px;
+}
+.nav {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+}
+.nav-ul {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 45px;
+    flex-wrap: inherit;
+    margin: auto;
+}
+.nav-element__link {
+    display: inline-block;
+    color: var(--light-color);
+    font-size: 1.25em;
+}
+.nav-link {
+    color:inherit;
+}
+.nav-link:hover {
+    color: var(--gold-color);
+}
+
+@media screen and (max-width:650px) {
+    .header, .nav, .nav-ul, svg {
+        justify-content: center;
+        align-items: center;
+    }
+    .header {
+        width: 100%;
+        min-width: 320px;
+        max-width: 650px;
+        padding: 10px 0;
+    }
+    .header.expanded {
+        padding: 12px 0;
+    }
+    .nav-ul {
+        gap: 10px;
+        padding: 0;
+    }
+}
+@media screen and (min-width:950px) {
+    .nav-element__link {
+        font-size: 2em;
+    }
+}
+/* End Header section */
+
+
+
+/* Main section */
+
+.main {
+    display: flex;
+    width: 100%;
+    height: 100vh;
+    justify-content: center;
+    align-items: center;
+    background: linear-gradient(to right, var(--light-blue-color3), var(--light-blue-color3)), url("Img/boca_juniors_cover.webp") ;
+    background-position: center;
+    background-size: cover;
+    margin-top: 85px;
+    min-width: 320px;
+}
+.main-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color: rgb(255, 255, 255);
+}
+h1 {
+    padding: 25px;
+    font-size: 3.4em;
+    text-align: center;
+    text-shadow: 3px 3px rgb(22, 22, 22);
+}
+
+.main-text {
+    width: 100%;
+    font-size: 1.45em;
+    text-align: center;
+    padding: 20px;
+    text-wrap: pretty;
+}
+.strong {
+    color: var(--gold-color);
+}
+@media screen and (max-width:650px) {
+    .main {
+        width: 100%;
+        height: 100vh;
+    }
+    h1 {
+        padding: 0;
+        margin: 30px 0 0 0;
+    }
+    .main-text {
+        font-size: 1em;
+    }
+}
+@media screen and (min-width:950px ) {
+    .main-container {
+        width: 100%;
+    }
+}
+@media screen and (min-width:1650px ) {
+    h1 {
+        font-size: 4em;
+    }
+    .main-text {
+        font-size: 2.3em;
+    }
+}
+/* End Main section */
+
+
+/* Start section */
+.section {
+    width: 100%;
+    color: var(--light-color);
+    margin-top: 65px;
+    margin-bottom: 120px;
+}
+.title-section {
+    text-align: center;
+    font-size: 30px;
+    text-transform: uppercase;
+    text-decoration:4px underline var(--light-color);
+    margin-bottom: 60px;
+}
+
+.section-container {
+    margin-bottom: 50px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.section-image {
+    width: 65%;
+    margin-bottom: 25px;
+    box-shadow: 0 0 20px 4px  #0c0c0cbc;
+    border-radius: 6px;
+}
+
+.section-text {
+    width: 65%;
+    padding: 10px 20px;
+    font-size: 1.25em;
+    color: inherit;
+}
+
+@media screen and (max-width:650px) {
+    .section-image {
+        width: 90%;
+    }
+    .section-text {
+        width: 100%;
+        text-align: center;
+        text-wrap: justify;
+        padding: 5px 22px;
+    }
+}
+@media screen and (min-width:1650px) {
+    .title-section {
+        font-size: 3em;
+    }
+    .section-text {
+        font-size: 2em;
+    }
+}
+/* End Section */
+
+/* Start section 2 */
+
+.section-2 {
+    display: flex;
+    width: 100%;
+    justify-content: center;
+    flex-direction: column;
+    text-align: center;
+    color: var(--light-color);
+    margin-bottom: 60px;
+}
+
+.section2-title {
+    color: inherit;
+}
+
+.section2-container_elements {
+    display: flex;
+    position: relative;
+    justify-content: center;
+    gap:80px 0;
+    margin-top: 70px;
+    color: var(--gold-color);
+}
+
+.section2-element {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    max-width: 280px; 
+    position: relative;
+    border-radius: 10px;
+    background-color: var(--light-blue-color2);
+    box-shadow: 0px 0px 24px 4px var(--color-bx);
+}
+.section2-image {
+    width: 100%;
+    height: 100%;
+    border-radius: 10px;
+}
+.card-front {
+    transform: perspective(900px) rotateY(0deg);
+    height: 100%;
+}
+.card-front, .card-back{
+    backface-visibility: hidden;
+    transition: transform 1s;
+}
+.section2-element:hover .card-front {
+    transform: perspective(1200px) rotateY(180deg);
+}
+.section2-element:hover .card-back {
+    transform: perspective(1200px) rotateY(360deg);
+    background-color: var(--light-blue-color4);
+    color: inherit;
+    border-radius: 6px;
+}
+.card-back {
+    display: grid;
+    top: 0;
+    transform: perspective(1200px) rotateY(180deg);
+    position: absolute;
+    width: 100%;
+    place-content: center;
+    height: 100%;
+    text-wrap: pretty;
+    overflow: hidden;
+    padding: 0px 12px;
+    padding: 20px 5px;
+    font-size: 1em;
+}
+span {
+    font-size: 1.1em;
+    text-transform: uppercase;
+}
+@media screen and (min-width:1500px) {
+    .section2-title {
+        font-size: 2.6em;
+    }
+    .section2-element {
+        max-width: 60%;
+    }
+    .card-back {
+        font-size: 1.8em;
+    }
+}
+/* End section2 */
+
+/* Start section3 */
+
+.section-3 {
+    display: flex;
+    color: var(--light-color);
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+}
+.section3-title {
+    text-align: center;
+    margin-bottom: 40px;
+    color: inherit;
+}
+.section3-container {
+    display:flex;
+    width: 100%;
+    max-width: 1200px;
+    min-width: 400px;
+    flex-direction: column;;
+    margin-bottom: 70px;
+}
+
+.section3-title2 {
+    text-align: center;
+    margin:40px 0;
+    text-transform: uppercase;
+    color: inherit;
+}
+.section3-element {
+    display: flex;
+    flex-direction: column;
+}
+.section3-image {
+    width: 100%;
+    height: 100%;
+    border-radius: 6px 6px 0 0;
+}
+.section3-image:hover {
+    opacity: 0.9;
+}
+.section3-container_description {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--light-color2);
+    border-radius: 0 0 6px 6px;
+    padding: 12px;
+    height: 100%;
+}
+.section3-name {
+    text-align: center;
+    font-size: 1.2em;
+    color: var(--dark-color);
+}
+.section3-element:hover {
+    box-shadow: 0 0 28px 2px var(--color-bx);
+}
+
+@media screen and (max-width:400px) {
+    .section3-container {
+        max-width: 300px;
+        width: 100%;
+        padding: 25px 0;
+    }
+    .section3-element {
+        width: 100%;
+        max-width: 300px;
+    }
+}
+@media screen and (max-width: 850px) {
+    .section3-container {
+        padding: 25px 0;
+    }
+    .section3-title {
+        padding: 5px;
+    }
+}
+@media screen and (min-width:1500px) {
+    .section3-title {
+        font-size: 3em;
+    }
+    .section3-title2 {
+        font-size: 2.3em;
+    }
+    .section3-name {
+        font-size: 1.8em;
+    }
+}
+/* END SECTION3 */
+
+/* Start Footer */
+.footer {
+    display: flex;
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+    padding: 80px;
+    background-color: var(--gold-color);
+    color: var(--light-blue-color);
+}
+.footer-text {
+    font-size: 1.4em;
+    text-align: center;
+    font-weight: bold;
+    text-decoration: 3px var(--light-blue-color) underline;
+}
+@media screen and (max-width: 400px) {
+    .footer {
+        max-width: 350px;
+        width: 100%;
+    }
+}
+@media screen and (min-width:1500px) {
+    .footer-text {
+        font-size: 2.5em;
+    }
+}
